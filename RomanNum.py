@@ -1,10 +1,9 @@
-RomanNum = input("Please type a roman Numeral (XVI, IIVL, XLIV, etc): ")
-RomanNumSplit = list(RomanNum)
-# def Convert(RomanNumSplit):
+
+intial = input("Please type a roman Numeral (XVI, IIVL, XLIV, etc): ")
+RomanNumSplit = list(intial)
 count = len(RomanNumSplit)
-index = 0
-print(len(RomanNumSplit))
-def Convert(RomanNumSplit):
+
+def RomToNum(RomanNumSplit):
     index = 0
     while index < len(RomanNumSplit):
         if RomanNumSplit[index] == "I":
@@ -31,10 +30,18 @@ def Convert(RomanNumSplit):
         else:
             print("Please input a valid Roman Numeral")
             break
-        
-Convert(RomanNumSplit)
-print(RomanNumSplit)
-        
-# Convert(RomanNumSplit)
-# print(RomanNumSplit)
+def RuleOne(RomanNumSplit):
+    val = 1
+    while True:
+        while val >= len(RomanNumSplit):
+            if RomanNumSplit[0] >= RomanNumSplit[val]:
+                val += 1
+                return True
+            else:
+                return False
+        return sum(RomanNumSplit)
+
+RomToNum(RomanNumSplit)
+print(RuleOne(RomanNumSplit))
+
 
