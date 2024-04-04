@@ -27,10 +27,7 @@ def parseBack(nums):
     return roman
 
         
-try:
-    romanNumeral = input("Please type a Roman Numeral (XVI, IIVL, XLIV, etc): ").upper()
-    parsedRoman = parseRoman(romanNumeral)
-    print("Number: ", convert(parsedRoman))
-    print("Roman Numeral: ", parseBack(parsedRoman))
-except ValueError as e:
-    print(e)
+romanNumeral = input("Please type a Roman Numeral (XVI, IIVL, XLIV, etc): ").upper()
+parsedRoman = parseRoman(romanNumeral)
+print("Number: ", convert(parsedRoman))
+print("Roman Numeral: ", parseBack(parsedRoman))
